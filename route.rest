@@ -1,0 +1,14 @@
+POST http://localhost:3000/accounting/create
+Content-Type: application/json
+
+{
+    "category": "TRF",
+    "pname": "Omole Estate",
+    "mode": "Nil",
+    "email": "bdurtie@yahoo.com"
+   
+}
+
+###
+
+GET http://localhost:3000/client/find/bisoye@gmail.com

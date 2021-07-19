@@ -1,0 +1,21 @@
+{
+  "name": "pragmatic",
+  "version": "1.0.0",
+  "description": "Backend of pragmatic project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Benjamin Adeniyi",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.3.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.8",
+    "nodemon": "^2.0.4"
+  }
+}
