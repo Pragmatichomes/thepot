@@ -2068,6 +2068,30 @@ mongoClient.connect(url, { useUnifiedTopology: true }, (err, db) => {
             });
         
         });
+
+        app.post('/dump/admin', (req, res) => {
+                   
+            const body = req.body;
+            adminCollection.insertOne(body, (err, result) => {
+            });
+        
+        });
+
+        app.post('/dump/consultant', (req, res) => {
+                   
+            const body = req.body;
+            consultantCollection.insertOne(body, (err, result) => {
+            });
+        
+        });
+
+        app.post('/dump/property', (req, res) => {
+                   
+            const body = req.body;
+            propertyCollection.insertOne(body, (err, result) => {
+            });
+        
+        });
        
 
     }
