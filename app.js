@@ -2044,35 +2044,37 @@ mongoClient.connect(url, { useUnifiedTopology: true }, (err, db) => {
             
         })
 
+
+        app.post('/dump/accounting', (req, res) => {
+           
+            const body = req.body;
+            accountCollection.insertOne(body, (err, result) => {
+            });
+        
+        });
+        
+        app.post('/dump/finalregistration', (req, res) => {
+                   
+            const body = req.body;
+            finalregistrationCollection.insertOne(body, (err, result) => {
+            });
+        
+        });
+        
+        app.post('/dump/subscribers', (req, res) => {
+                   
+            const body = req.body;
+            subscribersCollection.insertOne(body, (err, result) => {
+            });
+        
+        });
        
 
     }
 });
 
 
-app.post('/dump/accounting', (req, res) => {
-           
-    const body = req.body;
-    accountCollection.insertOne(body, (err, result) => {
-    });
 
-});
-
-app.post('/dump/finalregistration', (req, res) => {
-           
-    const body = req.body;
-    finalregistrationCollection.insertOne(body, (err, result) => {
-    });
-
-});
-
-app.post('/dump/subscribers', (req, res) => {
-           
-    const body = req.body;
-    subscribersCollection.insertOne(body, (err, result) => {
-    });
-
-});
 
 app.listen(port, () => {
     console.log("Listening to my app, coming on port "+process.env.PORT || port);
